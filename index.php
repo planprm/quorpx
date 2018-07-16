@@ -61,11 +61,13 @@
                  $postnametext[0] = $postname;
                  
                  
-                 array_push($postnametext, unserialize(file_get_contents('tasks.txt')));
+                 $postnametext = unserialize(file_get_contents('tasks.txt'));
 
                  $_SESSION['postname'] = $postnametext;
 
-                 
+                 array_push($postnametext, $postnametext);
+
+                 array_push($postnametext, $postname);
 
                  
                 
