@@ -57,17 +57,18 @@
                  echo $postnametext[0];
                  print_r($postnametext);  
                  $postname = $_POST['postname'];
+                 $count = 0;		 
+	         foreach($postnametext as $task)
+		 {
+			     
+	              echo '<h2>'.$count.'.'.$task.'</h2></br>';
+	              $count = $count + 1;
+		 }
                  if(isset($postname))
 		 {
 	             echo '<h2>'.$postname.'<h2></br>';
 	             array_push($postnametext, $postname);
-	             $count = 0;		 
-	             foreach($postnametext as $task)
-		     {
-			     
-			     echo '<h2>'.$count.'.'.$task.'</h2></br>';
-			     $count = $count + 1;
-		     }
+	             
 		 }
 
                 
