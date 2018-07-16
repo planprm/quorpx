@@ -53,14 +53,7 @@
                  array_push($postnametext,"test123");
                  echo $postnametext[0];
                  print_r($postnametext);  
-                 $db = new SQLite3('database.db');
-                 $results = $db->query('CREATE TABLE tasks(INT id, taskname VARCHAR(255), tasktext VARCHAR(255)');
-                 $results = $db->query('INSERT INTO tasks(id,taskname,tasktext) VALUES (1,'Первая задача','Задача в процессе...')');
-                 $results = $db->query('SELECT * FROM tasks');
-                 while ($row = $results->fetchArray()) {
-                    var_dump($row);
-                 }
-                $db->close();
+                
                 
             ?>
            <div id="content">test</div>
