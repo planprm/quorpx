@@ -70,7 +70,7 @@
                  echo fread($myfile,filesize("tasks.txt"));
                  fclose($myfile);
                  
-                 $servername = "db4free.net";
+                 /*$servername = "db4free.net";
                  $username = "timezilla";
                  $password = "cr9ismagilov";
 
@@ -82,7 +82,9 @@
                      die("Connection failed: " . $conn->connect_error);
                  }
                  echo "Connected successfully";
-                
+                 */
+                 echo mysql_get_host_info();
+                 echo mysql_get_server_info(); 
                  $count = 0;		 
 	         foreach($_SESSION['postname'] as $task)
 		 {
