@@ -64,11 +64,11 @@
 		 $username = "progamin_proga";
                  $database = "progamin_proga";
                  $password = "cr9ismagilov"; 
-                 $link = mysqli_connect($localhost, $username, $password, $database);
-                 $result = mysqli_query("SELECT * FROM tasks");
-                 $count	= mysqli_fetch_row($result);
-                 print_r($count);
-                 mysql_close($link);
+                 $conn = mysql_connect("progamin.beget.tech", "progamin_proga", "cr9ismagilov");
+                 $result = mysql_query("SELECT * FROM tasks", $conn);
+                 $task = mysqli_num_rows($result);
+                 print_r($task);
+                 mysql_close($conn);
                  //$postnametext = unserialize(file_get_contents('tasks.txt'));
 
                  $_SESSION['postname'] = $postnametext;
