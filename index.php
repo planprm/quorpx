@@ -2,8 +2,8 @@
 <html>
    <head>
        <meta charset="utf-8" />
-       <meta name="descirption" content="TimeZilla - Сервис по работе с датой, временем, заметками."/>
-       <title>TimeZilla - Сервис по работе с датой, временем, заметками.</title>
+       <meta name="descirption" content="Quorpx | TimeZilla - Сервис по работе с датой, временем, заметками."/>
+       <title>Quorpx | TimeZilla - Сервис по работе с датой, временем, заметками.</title>
        <style>
            *
            {
@@ -36,9 +36,9 @@
        </script>
    </head>
    <body>
-      <h1 class="head">TimeZilla - Сервис по работе с датой, временем, заметками</h1>
+      <h1 class="head">Quorpx | TimeZilla - Сервис по работе с датой, временем, заметками</h1>
       <div class="block">
-            </br></br><p><b>TimeZilla</b> - Сервис по работе с датой, временем, заметками</p></br></br>
+            </br></br><p><b>Quorpx | TimeZilla</b> - Сервис по работе с датой, временем, заметками</p></br></br>
             <?php
                  /* @author:Ismagilov A.Z. @amirismagilov*/
                  /*
@@ -49,19 +49,14 @@
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
                  echo "Hello,World!";
-                 $dbhandle = sqlite_open('database.db', 0666, $error);
-                 if (!$dbhandle) die ($error);
-
-                 $stm = "CREATE TABLE Friends(Id integer PRIMARY KEY," . 
-                        "Name text UNIQUE NOT NULL, Sex text CHECK(Sex IN ('M', 'F')))";
-                 $ok = sqlite_exec($dbhandle, $stm, $error);
-
-                 if (!$ok)
-                 die("Cannot execute query. $error");
-
-                 echo "Database Friends created successfully";
-
-                 sqlite_close($dbhandle);
+                 $filename = 'database.db';
+                 $db_handle  = new SQLite3($filename);
+                 $db_handle->exec("CREATE TABLE tasks(INT id, taskname VARCHAR(255), tasktext VARCHAR(255)");
+                 $db_handle->exec("INSERT INTO tasks(id, taskname, tasktext VALUES (1,'Первая задача','Задача идет...')");
+                 $db_handle->exec("SELECT * FROM tasks");
+                 $result = $db_handle->query($query_string);
+                 $row = $result->fetchArray();
+                 $db_handle->close();
             ?>
            <div id="content">test</div>
 	   <h3 class="loginblock">
