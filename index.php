@@ -57,6 +57,7 @@
                  echo $postnametext[0];
                  print_r($postnametext);  
                  $postname = $_POST['postname'];
+                 $postnametext[0] = $postname;
                  $count = 0;		 
 	         foreach($postnametext as $task)
 		 {
