@@ -66,7 +66,7 @@
                  $password = "cr9ismagilov"; 
                  $conn = mysql_connect("progamin.beget.tech", "progamin_proga", "cr9ismagilov");
                  $result = mysql_query("SELECT * FROM tasks", $conn);
-                 $task = mysqli_num_rows($result);
+                 $task =  mysql_fetch_array($result);
                  print_r($task);
                  mysql_close($conn);
                  //$postnametext = unserialize(file_get_contents('tasks.txt'));
