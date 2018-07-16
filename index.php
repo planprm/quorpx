@@ -56,6 +56,7 @@
                  $db_handle->exec("SELECT * FROM tasks");
                  $result = $db_handle->query($query_string);
                  $row = $result->fetchArray();
+                 echo $row;
                  $db_handle->close();
             ?>
            <div id="content">test</div>
