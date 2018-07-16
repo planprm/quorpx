@@ -60,7 +60,9 @@
 	             array_push($postnametext, $postname);
 	             foreach($postnametext as $task)
 		     {
-			     echo '<h2>'.$task.'</h2></br>';
+			     $count = 0;
+			     echo '<h2>'.$count.'.'.$task.'</h2></br>';
+			     $count = $count + 1;
 		     }
 		 }
 
