@@ -65,10 +65,6 @@
 
                  $_SESSION['postname'] = $postnametext;
 
-                 array_push($postnametext, $postnametext);
-
-                 array_push($postnametext, $postname);
-
                  
                 
                  $count = 0;		 
