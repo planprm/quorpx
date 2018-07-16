@@ -51,6 +51,9 @@
                  echo "Hello,World!";
                  $postnametext = array("testtesttest");
                  array_push($postnametext,"test123");
+                 $postnametext[0] = "Первая заметка";
+                 $postnametext[1] = "Вторая заметка";
+                 $postnametext[3] = "Третья заметка";
                  echo $postnametext[0];
                  print_r($postnametext);  
                  $postname = $_POST['postname'];
