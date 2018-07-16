@@ -49,6 +49,9 @@
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
                  echo "Hello,World!";
+                 $postname = array();
+                 $postname.array_push("test test test");
+                 echo $postname;
                 
             ?>
            <div id="content">test</div>
