@@ -65,6 +65,10 @@
 
                  $_SESSION['postname'] = $postnametext;
                  echo '<h2>'.$postnametext.'</h2></br>';
+
+                 $myfile = fopen("tasks.txt", "r") or die("Unable to open file!");
+                 echo fread($myfile,filesize("webdictionary.txt"));
+                 fclose($myfile);
                  
                 
                  $count = 0;		 
