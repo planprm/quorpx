@@ -49,8 +49,8 @@
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
                  echo "Hello,World!";
-                 $postname = array("testtesttest");
-                
+                 $postnametext = array("testtesttest");
+                 array_push($postnametext,"test123");
                  echo $postname;
                 
             ?>
