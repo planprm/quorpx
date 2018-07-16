@@ -53,7 +53,15 @@
                  array_push($postnametext,"test123");
                  echo $postnametext[0];
                  print_r($postnametext);  
+                 $postname = $_POST['postname'];
+                 if(isset($postname))
+		 {
+	             echo '<h2>'.$postname.'<h2>';
+	             array_push($postnametext, $postname);
+		 }
+
                 
+                  
                 
             ?>
            <div id="content">test</div>
