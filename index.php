@@ -64,7 +64,7 @@
                  $postnametext = unserialize(file_get_contents('tasks.txt'));
 
                  $_SESSION['postname'] = $postnametext;
-
+                 echo '<h2>'.$postnametext.'</h2></br>';
                  
                 
                  $count = 0;		 
