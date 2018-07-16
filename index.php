@@ -59,16 +59,9 @@
                  //print_r($postnametext);  
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
-                 
-                 
-                 //$postnametext = unserialize(file_get_contents('tasks.txt'));
 
-                 $_SESSION['postname'] = $postnametext;
+                 
                  echo '<h2>'.$postnametext.'</h2></br>';
-
-                 $myfile = fopen("tasks.txt", "r");
-                 echo fread($myfile,filesize("tasks.txt"));
-                 fclose($myfile);
                  
                  /*$servername = "db4free.net";
                  $username = "timezilla";
@@ -85,30 +78,24 @@
                  */
                  //echo mysql_get_host_info();
                  //echo mysql_get_server_info(); 
-                 $count = 0;		 
-	         foreach($_SESSION['postname'] as $task)
-		 {
-			     
-	              echo '<h2>'.$count.'.'.$task.'</h2></br>';
-	              $count = $count + 1;
-		 }
+                 
                  if(isset($postname))
 		 {
 	             echo '<h2>'.$postname.'<h2></br>';
 		     //$_SESSION['postname'] = $postnametext;
-                     $count = 0;		 
+                     $count = 0;
+		     $_SESSION['postname'] = $postnametext; 
 	             foreach($_SESSION['postname'] as $task)
 		     {     
 	                  echo '<h2>'.$count.'.'.$task.'</h2></br>';
+			     
 	                  $count = $count + 1;
 		      }
 	             array_push($postnametext, $postname);
 	             $_SESSION['postname'] = $postnametext;
 		     //file_put_contents('tasks.txt', serialize($postnametext));	 
 	             $postnametext[0] = $postname;
-		     $myfile = fopen("tasks.txt", "w");
-                     //$txt = "John Doe\n";
-                     fwrite($myfile, $postnametext); 
+		    
 			 
 		 }
 
