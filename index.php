@@ -60,8 +60,14 @@
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
                  
-                 $postnametext = unserialize(file_get_contents('tasks.txt'));
+                 
+                 array_push($postnametext, unserialize(file_get_contents('tasks.txt')));
+
                  $_SESSION['postname'] = $postnametext;
+
+                 
+
+                 
                 
                  $count = 0;		 
 	         foreach($_SESSION['postname'] as $task)
