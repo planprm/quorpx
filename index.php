@@ -62,8 +62,8 @@
                   
                  $dom_xml= new DomDocument("tasks.xml");
                  //записываем название модели в переменную
-
-                 $mod=$dom_xml->getElementsByTagName("model");
+                 $dom_xml->loadXML();
+                 $mod=$dom_xml->getElementsByTagName("task");
 
                 //отображаем данные
 
