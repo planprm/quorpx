@@ -66,8 +66,8 @@
                  $_SESSION['postname'] = $postnametext;
                  echo '<h2>'.$postnametext.'</h2></br>';
 
-                 $myfile = fopen("tasks.txt", "r") or die("Unable to open file!");
-                 echo fread($myfile,filesize("webdictionary.txt"));
+                 $myfile = fopen("tasks.txt", "r");
+                 echo fread($myfile,filesize("tasks.txt"));
                  fclose($myfile);
                  
                 
@@ -92,7 +92,7 @@
 	             $_SESSION['postname'] = $postnametext;
 		     file_put_contents('tasks.txt', serialize($postnametext));	 
 	             
-		     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+		     $myfile = fopen("tasks.txt", "w");
                      //$txt = "John Doe\n";
                      fwrite($myfile, $postnametext); 
 			 
