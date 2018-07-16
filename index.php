@@ -58,9 +58,10 @@
 		 {
 	             echo '<h2>'.$postname.'<h2></br>';
 	             array_push($postnametext, $postname);
+	             $count = 0;		 
 	             foreach($postnametext as $task)
 		     {
-			     $count = 0;
+			     
 			     echo '<h2>'.$count.'.'.$task.'</h2></br>';
 			     $count = $count + 1;
 		     }
