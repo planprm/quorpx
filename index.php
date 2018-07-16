@@ -52,7 +52,7 @@
                  $postnametext = array("testtesttest");
                  array_push($postnametext,"test123");
                  echo $postnametext;
-                 print_r($stack);  
+                 print_r($postnametext);  
                 
             ?>
            <div id="content">test</div>
