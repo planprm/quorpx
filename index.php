@@ -59,8 +59,18 @@
                  //print_r($postnametext);  
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
+                  
+                 $dom_xml= new DomDocument();
+                 $dom_xml->loadXML('<car><model>volvo</model><model>Lada</model></car>'); 
+                 //записываем название модели в переменную
 
-                 
+                 $mod=$dom_xml->getElementsByTagName("model");
+
+                //отображаем данные
+
+                 foreach ($mod as $element){
+                   echo $element->nodeValue." ".$element->nodeName." ".'<br />';
+                 }
                  echo '<h2>'.$postnametext.'</h2></br>';
                  
                  /*$servername = "db4free.net";
