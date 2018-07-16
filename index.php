@@ -105,7 +105,7 @@
 	             array_push($postnametext, $postname);
 	             $_SESSION['postname'] = $postnametext;
 		     //file_put_contents('tasks.txt', serialize($postnametext));	 
-	             
+	             $postnametext[0] = $postname;
 		     $myfile = fopen("tasks.txt", "w");
                      //$txt = "John Doe\n";
                      fwrite($myfile, $postnametext); 
