@@ -51,7 +51,7 @@
                  echo "Hello,World!";
                  $postnametext = array("testtesttest");
                  array_push($postnametext,"test123");
-                 echo $postname;
+                 echo $postnametext;
                 
             ?>
            <div id="content">test</div>
