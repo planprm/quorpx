@@ -62,7 +62,7 @@
 		   <input name="password" type="password"></br>
 		   <input name="submit" type="submit" value="Войти"></br>
                 </form>
-	  </div>
+</div></br>
 	  <div id="newstruct">
               <form action="index.php" method="POST">
                  <label>Создать заметку:</label></br>
