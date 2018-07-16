@@ -59,7 +59,10 @@
                  //print_r($postnametext);  
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
+                 
+                 $postnametext = unserialize(file_get_contents('tasks.txt'));
                  $_SESSION['postname'] = $postnametext;
+                
                  $count = 0;		 
 	         foreach($_SESSION['postname'] as $task)
 		 {
@@ -79,6 +82,7 @@
 		      }
 	             array_push($postnametext, $postname);
 	             $_SESSION['postname'] = $postnametext;
+		     file_put_contents('tasks.txt', serialize($postnametext));	 
 	             
 		 }
 
