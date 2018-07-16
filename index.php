@@ -61,7 +61,6 @@
                  $postnametext[0] = $postname;
                   
                  $dom_xml= new DomDocument();
-                 $dom_xml->loadXML('<car><model>volvo</model><model>Lada</model></car>'); 
                  //записываем название модели в переменную
 
                  $mod=$dom_xml->getElementsByTagName("model");
@@ -69,7 +68,7 @@
                 //отображаем данные
 
                  foreach ($mod as $element){
-                   echo $element->nodeValue." ".$element->nodeName." ".'<br />';
+                   echo '<h2>'.$element->nodeValue." ".$element->nodeName." ".'<br /></h2>';
                  }
                  echo '<h2>'.$postnametext.'</h2></br>';
                  
@@ -98,6 +97,7 @@
 	             foreach($_SESSION['postname'] as $task)
 		     {     
 	                  echo '<h2>'.$count.'.'.$task.'</h2></br>';
+                          $dom_xml->loadXML('<task>'.$task.'</task>'); 
 			     
 	                  $count = $count + 1;
 		      }
