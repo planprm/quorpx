@@ -83,8 +83,8 @@
                  }
                  echo "Connected successfully";
                  */
-                 echo mysql_get_host_info();
-                 echo mysql_get_server_info(); 
+                 //echo mysql_get_host_info();
+                 //echo mysql_get_server_info(); 
                  $count = 0;		 
 	         foreach($_SESSION['postname'] as $task)
 		 {
