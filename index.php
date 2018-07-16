@@ -61,7 +61,7 @@
                  $postnametext[0] = $postname;
                  
                  
-                 $postnametext = unserialize(file_get_contents('tasks.txt'));
+                 //$postnametext = unserialize(file_get_contents('tasks.txt'));
 
                  $_SESSION['postname'] = $postnametext;
                  echo '<h2>'.$postnametext.'</h2></br>';
@@ -90,7 +90,7 @@
 		      }
 	             array_push($postnametext, $postname);
 	             $_SESSION['postname'] = $postnametext;
-		     file_put_contents('tasks.txt', serialize($postnametext));	 
+		     //file_put_contents('tasks.txt', serialize($postnametext));	 
 	             
 		     $myfile = fopen("tasks.txt", "w");
                      //$txt = "John Doe\n";
