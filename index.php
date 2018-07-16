@@ -49,14 +49,14 @@
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
                  session_start();
-                 echo "Hello,World!";
+                 echo "agile";
                  $postnametext = array("testtesttest");
                  array_push($postnametext,"test123");
                  $postnametext[0] = "Первая заметка";
                  $postnametext[1] = "Вторая заметка";
                  $postnametext[3] = "Третья заметка";
-                 echo $postnametext[0];
-                 print_r($postnametext);  
+                 //echo $postnametext[0];
+                 //print_r($postnametext);  
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
                  $_SESSION['postname'] = $postnametext;
