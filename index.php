@@ -56,8 +56,12 @@
                  $postname = $_POST['postname'];
                  if(isset($postname))
 		 {
-	             echo '<h2>'.$postname.'<h2>';
+	             echo '<h2>'.$postname.'<h2></br>';
 	             array_push($postnametext, $postname);
+	             foreach($postnametext as $task)
+		     {
+			     echo '<h2>'.$task.'</h2></br>';
+		     }
 		 }
 
                 
