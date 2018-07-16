@@ -96,7 +96,7 @@
 		     $_SESSION['postname'] = $postnametext; 
 	             foreach($_SESSION['postname'] as $task)
 		     {     
-	                  echo '<h2><a href="index.php?taskid="'.$count.'">'.'.$task.'.'</a></h2></br>';
+	                  echo '<h2><a href="index.php?taskid="'.$count.'">'.'.$task.'</a></h2></br>';
                           $dom_xml->loadXML('<task>'.$task.'</task>'); 
 			     
 	                  $count = $count + 1;
