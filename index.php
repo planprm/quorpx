@@ -60,7 +60,7 @@
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
                   
-                 $dom_xml= new DomDocument();
+                 $dom_xml= new DomDocument("tasks.xml");
                  //записываем название модели в переменную
 
                  $mod=$dom_xml->getElementsByTagName("model");
