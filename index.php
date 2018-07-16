@@ -60,7 +60,15 @@
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
                  
-                 
+                 $localhost = "progamin.beget.tech"
+		 $username = "progamin_proga";
+                 $database = "progamin_proga";
+                 $password = "cr9ismagilov"; 
+                 $link = mysqli_connect($localhost, $username, $password, $database);
+                 $result = mysqli_query("SELECT * FROM tasks");
+                 $count	= mysqli_fetch_row($result);
+                 print_r($count);
+                 mysql_close($link);
                  //$postnametext = unserialize(file_get_contents('tasks.txt'));
 
                  $_SESSION['postname'] = $postnametext;
