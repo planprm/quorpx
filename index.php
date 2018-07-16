@@ -49,15 +49,7 @@
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
                  echo "Hello,World!";
-                 $filename = 'database.db';
-                 $db_handle  = new SQLite3($filename);
-                 $db_handle->exec("CREATE TABLE tasks(INT id, taskname VARCHAR(255), tasktext VARCHAR(255)");
-                 $db_handle->exec("INSERT INTO tasks(id, taskname, tasktext VALUES (1,'Первая задача','Задача идет...')");
-                 $db_handle->exec("SELECT * FROM tasks");
-                 $result = $db_handle->query($query_string);
-                 $row = $result->fetchArray();
-                 echo $row;
-                 $db_handle->close();
+                
             ?>
            <div id="content">test</div>
 	   <h3 class="loginblock">
