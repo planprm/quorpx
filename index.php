@@ -92,6 +92,10 @@
 	             $_SESSION['postname'] = $postnametext;
 		     file_put_contents('tasks.txt', serialize($postnametext));	 
 	             
+		     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+                     //$txt = "John Doe\n";
+                     fwrite($myfile, $postnametext); 
+			 
 		 }
 
                 
