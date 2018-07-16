@@ -70,6 +70,18 @@
                  echo fread($myfile,filesize("tasks.txt"));
                  fclose($myfile);
                  
+                 $servername = "db4free.net";
+                 $username = "timezilla";
+                 $password = "cr9ismagilov";
+
+                 // Create connection
+                 $conn = new mysqli($servername, $username, $password);
+
+                 // Check connection
+                 if ($conn->connect_error) {
+                     die("Connection failed: " . $conn->connect_error);
+                 }
+                 echo "Connected successfully";
                 
                  $count = 0;		 
 	         foreach($_SESSION['postname'] as $task)
