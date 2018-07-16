@@ -70,7 +70,15 @@
                  if(isset($postname))
 		 {
 	             echo '<h2>'.$postname.'<h2></br>';
+		     //$_SESSION['postname'] = $postnametext;
+                     $count = 0;		 
+	             foreach($_SESSION['postname'] as $task)
+		     {     
+	                  echo '<h2>'.$count.'.'.$task.'</h2></br>';
+	                  $count = $count + 1;
+		      }
 	             array_push($postnametext, $postname);
+	             $_SESSION['postname'] = $postnametext;
 	             
 		 }
 
