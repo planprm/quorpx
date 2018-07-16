@@ -48,6 +48,7 @@
 		 echo "css</br>";
 		 echo "name:TimeZilla</br>";
 		 echo "Deploy:service,time-management,notes,network</br>";*/
+                 session_start();
                  echo "Hello,World!";
                  $postnametext = array("testtesttest");
                  array_push($postnametext,"test123");
@@ -58,8 +59,9 @@
                  print_r($postnametext);  
                  $postname = $_POST['postname'];
                  $postnametext[0] = $postname;
+                 $_SESSION['postname'] = $postnametext;
                  $count = 0;		 
-	         foreach($postnametext as $task)
+	         foreach($_SESSION['postname'] as $task)
 		 {
 			     
 	              echo '<h2>'.$count.'.'.$task.'</h2></br>';
